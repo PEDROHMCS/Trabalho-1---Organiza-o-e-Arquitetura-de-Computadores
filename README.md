@@ -1,4 +1,4 @@
-# Projeto de Arquitetura de Computadores: Montagem de Trem 🚂
+# Projeto de Arquitetura de Computadores: Montagem de Trem 
 
 ## 1. Visão Geral do Projeto
 
