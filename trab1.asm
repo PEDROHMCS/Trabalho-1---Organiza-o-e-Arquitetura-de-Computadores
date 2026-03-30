@@ -67,13 +67,13 @@ new_no:
 	sw zero, 8(a0) # escreve o valor 0 nos bytes do ponteiro para o próximo vagão
 	
 	la t1, ptr_head # t1 recebe o endereço de ptr_head
-	lw t0, 0(t1) # t0 recebe o valor de head
+	lw t0, 0(t1) # t0 recebe o conteúdo de head
 	# programa entra na função de busca do último nó
 
 search_last:
-	lw t1, 8(t0) # posiciona o registrador t1 no byte 8 do head (cujo endereço está em t1)
+	lw t1, 8(t0) # t1 lê o ponteiro para o próximo nó do vagão atual
 	
-	# Verificar se o valor é 0 (caso de primeiro vagão)
+	# Verificar se o valor é 0 (se sim, significa que é o último vagão)
 	beq t1, zero, link_no
 	
 	# Se não for zero, percorre a lista
