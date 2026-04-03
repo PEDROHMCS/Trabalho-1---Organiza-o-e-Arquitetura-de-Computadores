@@ -16,7 +16,7 @@
 	msg_encontrado: .asciz "Vagão encontrado!\n"
 	msg_nao_encontrado: .asciz "Vagão não encontrado.\n"
 	msg_printID: .asciz "ID do vagão: "
-	msg_printCOD: .asciz "\nCódigo do vagão: \n"
+	msg_printCOD: .asciz "\nCódigo do vagão: "
 	
 	.text
 	.align 2
