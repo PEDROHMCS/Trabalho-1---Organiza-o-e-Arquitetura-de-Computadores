@@ -15,6 +15,7 @@
 	#outputs da interface
 	msg_encontrado: .asciz "Vagão encontrado!\n"
 	msg_nao_encontrado: .asciz "Vagão não encontrado.\n"
+	msg_removido: .asciz "Vagão removido!\n"
 	msg_printID: .asciz "ID do vagão: "
 	msg_printCOD: .asciz "\nCódigo do vagão: "
 	
@@ -275,6 +276,12 @@ remove_executa:
 	#t4, armazena o endereço do vagão depois do que será removido agora
 	lw t4, 8(t2)
 	sw t4, 8(t1)
+	
+	# avisa que o vagão foi removido
+	addi a7, zero, 4
+	la a0, msg_removido
+	#executa
+	ecall
 
 fim_remove:
 	jalr zero, 0(ra)
