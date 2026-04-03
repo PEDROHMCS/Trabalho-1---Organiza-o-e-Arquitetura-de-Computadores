@@ -360,6 +360,11 @@ loop_printTrain:
 	li a7, 1 
 	ecall
 
+	#imprime quebra de linha para organizar a lista na tela
+	li a0, 10        #10 é o código ASCII para '\n'
+	li a7, 11        #serviço 11 é o de imprimir caractere
+	ecall
+
 	#vai para o próximo vagão
 	lw t0, 8(t0)
 	jal zero, loop_printTrain
